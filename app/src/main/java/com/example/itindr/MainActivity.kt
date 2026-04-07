@@ -8,6 +8,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.splash_screen)
+        setContentView(R.layout.choose_screen)
     }
 }
