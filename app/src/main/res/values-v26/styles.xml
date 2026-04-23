@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="InterestTagWhite">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:background">@drawable/bg_interest_tag_white</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+
+    <style name="InterestTagSemiTransparent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:background">@drawable/bg_interest_tag_semi_transparent</item>
+        <item name="android:paddingHorizontal">12dp</item>
+    </style>
+</resources>

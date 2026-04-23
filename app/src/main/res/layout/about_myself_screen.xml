@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_choose_2"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="40dp">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="137dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="60dp"
+            android:fontFamily="@font/inter"
+            android:includeFontPadding="false"
+            android:text="О себе"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/containerProfile"
+            android:layout_width="247dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="132dp"
+            android:divider="@drawable/spacer_16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:showDividers="middle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <FrameLayout
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/bg_rounded_avatar">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_user_circle"
+                    app:tint="#FFFFFF" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="151dp"
+                android:layout_height="32dp"
+                android:background="@drawable/bg_rounded_button"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="16dp">
+                <ImageView
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_gallery_add"
+                    app:tint="#FFFFFF" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/inter"
+                    android:text="Выбрать фото"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:textFontWeight="600" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inputsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="236dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter"
+                android:text="Пароль"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:hint="Ваш пароль"
+                android:inputType="textPassword"
+                android:paddingHorizontal="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter"
+                android:text="О себе"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/aboutMeInput"
+                android:layout_width="match_parent"
+                android:layout_height="128dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_text_bg"
+                android:gravity="top|start"
+                android:hint="Опишите себя"
+                android:inputType="textMultiLine"
+                android:padding="16dp"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#80FFFFFF" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:fontFamily="@font/inter"
+                android:text="Укажи интересы"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <androidx.constraintlayout.helper.widget.Flow
+                    android:id="@+id/interestsFlow"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:flow_horizontalStyle="packed"
+                    app:flow_horizontalBias="0"
+                    app:flow_horizontalGap="8dp"
+                    app:flow_verticalGap="8dp"
+                    app:flow_wrapMode="chain"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:constraint_referenced_ids="tag1,tag2,tag3,tag4,tag5,tag6,tag7,tag8,tag9,tag10,tag11,tag12,tag13" />
+
+                <FrameLayout android:id="@+id/tag1" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="Python" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag2" style="@style/InterestTagWhite"><TextView style="@style/InterestTagText" android:textColor="#000000" android:text="Django" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag3" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="REST" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag4" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="Swift" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag5" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="Obj-C" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag6" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="React JS" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag7" style="@style/InterestTagWhite"><TextView style="@style/InterestTagText" android:textColor="#000000" android:text="Kotlin" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag8" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="Git" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag9" style="@style/InterestTagWhite"><TextView style="@style/InterestTagText" android:textColor="#000000" android:text="Unity" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag10" style="@style/InterestTagWhite"><TextView style="@style/InterestTagText" android:textColor="#000000" android:text=".NET" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag11" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="SQL" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag12" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="Clean Architecture" /></FrameLayout>
+                <FrameLayout android:id="@+id/tag13" style="@style/InterestTagSemiTransparent"><TextView style="@style/InterestTagText" android:text="UML" /></FrameLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_save_bg"
+            android:fontFamily="@font/inter"
+            android:gravity="center"
+            android:text="Сохранить"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            app:textAllCaps="false"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

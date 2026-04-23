@@ -8,6 +8,6 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.login_screen)
+        setContentView(R.layout.about_myself_screen)
     }
 }
